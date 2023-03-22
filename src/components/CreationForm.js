@@ -23,6 +23,7 @@ const CreationForm = () => {
                             required
                             id='outlined-required'
                             label='Character Name'
+                            defaultValue='Enter Name'
                             sx={{ m: 1, width: '50ch' }}
                         />
                         <TextField 
