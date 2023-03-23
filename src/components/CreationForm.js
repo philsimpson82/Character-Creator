@@ -1,6 +1,6 @@
 import { useState } from 'react';
 //import { Modal, ModalHeader, ModalBody, FormGroup } from 'reactstrap';
-import { Modal, TextField, Button, Box, Container, MenuItem, FormControl} from '@mui/material';
+import { Modal, TextField, Button, Box, Container, MenuItem, FormControl, FormGroup} from '@mui/material';
 import { Formik, Form, ErrorMessage } from 'formik';
 import { LEVELS, RACES, CLASSES, GENDER } from '../app/shared/CHARACTEROPTIONS';
 import { positions } from '@mui/system';
@@ -19,12 +19,13 @@ const CreationForm = () => {
                     noValidate
                     autoComplete='off'
                 >
+                    <FormGroup row>
                         <TextField 
                             required
                             id='outlined-required'
                             label='Character Name'
                             defaultValue='Enter Name'
-                            sx={{ m: 1, width: '50ch' }}
+                            sx={{ m: 1, width: '30ch' }}
                         />
                         <TextField 
                             required
@@ -32,8 +33,7 @@ const CreationForm = () => {
                             select
                             label='Level'
                             defaultValue='1'
-                            helperText='Starting Level'
-                            sx={{ m: 1, width: '10ch' }}
+                            sx={{ m: 1, width: '8ch', justifyContent: 'flex-end' }}
                         >
                             {charLevels.map((level) => (
                                 <MenuItem key={level.value} value={level.value}>
@@ -41,13 +41,15 @@ const CreationForm = () => {
                                 </MenuItem>
                             ))}
                         </TextField>
+                    </FormGroup>
+                    <FormGroup row>
                         <TextField 
                             required
                             id='outlined-select-required'
                             select
                             label='Race'
                             defaultValue='Select'
-                            sx={{ m: 1, width: '25ch' }}
+                            sx={{ m: 1, width: '12ch' }}
                         >
                             {charRaces.map((race) => (
                                 <MenuItem key={race.label} value={race.label}>
@@ -59,23 +61,9 @@ const CreationForm = () => {
                             required
                             id='outlined-select-required'
                             select
-                            label='Gender'
-                            defaultValue='Select'
-                            sx={{ m: 1, width: '25ch' }}
-                        >
-                            {charGender.map((gender) => (
-                                <MenuItem key={gender.label} value={gender.label}>
-                                    {gender.label}
-                                </MenuItem>
-                            ))}
-                        </TextField>
-                        <TextField 
-                            required
-                            id='outlined-select-required'
-                            select
                             label='Class'
                             defaultValue='Select'
-                            sx={{ m: 1, width: '25ch' }}
+                            sx={{ m: 1, width: '14ch' }}
                         >
                             {charClasses.map((charClass) => (
                                 <MenuItem key={charClass.label} value={charClass.label}>
@@ -83,23 +71,93 @@ const CreationForm = () => {
                                 </MenuItem>
                             ))}
                         </TextField>
+                        <TextField 
+                            required
+                            id='outlined-select-required'
+                            select
+                            label='Gender'
+                            defaultValue='Select'
+                            sx={{ m: 1, width: '12ch' }}
+                        >
+                            {charGender.map((gender) => (
+                                <MenuItem key={gender.label} value={gender.label}>
+                                    {gender.label}
+                                </MenuItem>
+                            ))}
+                        </TextField>
+                    </FormGroup>
+                    <FormGroup row>
+                        <TextField
+                            required
+                            id='outlined-select-required'
+                            select
+                            label='Strength'
+                            defaultValue='Select'
+                            sx={{ m: 1, width: '12ch' }}
+                        >
+                        </TextField>
+                        <TextField
+                            required
+                            id='outlined-select-required'
+                            select
+                            label='Dexterity'
+                            defaultValue='Select'
+                            sx={{ m: 1, width: '12ch' }}
+                        >
+                        </TextField>
+                        <TextField
+                            required
+                            id='outlined-select-required'
+                            select
+                            label='Constitution'
+                            defaultValue='Select'
+                            sx={{ m: 1, width: '12ch' }}
+                        >
+                        </TextField>
+                        <TextField
+                            required
+                            id='outlined-select-required'
+                            select
+                            label='Intelligence'
+                            defaultValue='Select'
+                            sx={{ m: 1, width: '12ch' }}
+                        >
+                        </TextField>
+                        <TextField
+                            required
+                            id='outlined-select-required'
+                            select
+                            label='Wisdom'
+                            defaultValue='Select'
+                            sx={{ m: 1, width: '12ch' }}
+                        >
+                        </TextField>
+                        <TextField
+                            required
+                            id='outlined-select-required'
+                            select
+                            label='Charisma'
+                            defaultValue='Select'
+                            sx={{ m: 1, width: '12ch' }}
+                        >
+                        </TextField>
+                    </FormGroup>
                     <TextField
                         required
-                        fullWidth
                         id='outlined-multiline-static'
                         label='Background'
                         multiline
                         rows={5}
                         defaultValue='Write your background story.'
-                        sx={{ m: 1 }}
+                        sx={{ m: 1, display: 'flex' }}
                     />
-                    <TextField />
-                    <TextField />
-                    <TextField />
-                    <TextField />
-                    <TextField />
-                    <TextField />
-                    <TextField />
+                    <TextField 
+                        required
+                        id='outlined-required'
+                        label='Player Name'
+                        defaultValue='Enter Name'
+                        sx={{ m: 1, width: '30ch', justifyContent: 'center'}}
+                    />
                 </Box>
             </Formik>
         </>

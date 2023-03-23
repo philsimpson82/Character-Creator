@@ -53,6 +53,9 @@ export const CLASSES = [
         label:'Rogue'
     },
     {
+        label:'Barbarian'
+    },
+    {
         label:'Fighter'
     },
     {
