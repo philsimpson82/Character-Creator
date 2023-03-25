@@ -1,9 +1,8 @@
 import { useState } from 'react';
-//import { Modal, ModalHeader, ModalBody, FormGroup } from 'reactstrap';
-import { Modal, TextField, Button, Box, Container, MenuItem, FormControl, FormGroup} from '@mui/material';
+import { Modal, TextField, Button, Box, Container, MenuItem, FormGroup} from '@mui/material';
 import { Formik, Form, ErrorMessage } from 'formik';
 import { LEVELS, RACES, CLASSES, GENDER, STRENGTH, DEXTERITY, CONSTITUTION, INTELLIGENCE, WISDOM, CHARISMA } from '../app/shared/CHARACTEROPTIONS';
-import { positions } from '@mui/system';
+import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
 
 const CreationForm = (props) => {
     const charLevels = LEVELS;
@@ -33,11 +32,12 @@ const CreationForm = (props) => {
                             top: '50%',
                             left: '50%',
                             transform: 'translate(-50%, -50%)',
-                            width: 400,
+                            width: 410,
                             bgcolor: 'background.paper',
-                            border: '2px solid #000',
+                            border: '1px solid #000',
+                            borderRadius: 2,
                             boxShadow: 24,
-                            p: 4,
+                            p: 2,
                         }}
                     >
                         <FormGroup 
@@ -212,8 +212,19 @@ const CreationForm = (props) => {
                             id='outlined-required'
                             label='Player Name'
                             defaultValue='Enter Name'
-                            sx={{ m: 1, width: '30ch', justifyContent: 'center'}}
+                            sx={{ m: 1, width: '30ch' }}
                         />
+                        <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+                            <Button
+                                variant='contained'
+                                size='large'
+                                startIcon={<AccessibilityNewIcon />}
+                                sx={{ m: 1, width: '14ch'}}
+                                onClick={props.closeModal}
+                            >
+                                Create
+                            </Button>
+                        </Box>
                     </Box>
                 </Formik>
             </Modal>
