@@ -13,7 +13,7 @@ export const CHARACTERS = [
         id: 1,
         name: 'Teirora',
         level: 1,
-        gender: 'male',
+        gender: 'female',
         race: 'elf',
         class: 'ranger',
         backstory: 'Teirora comes from the enchanting mountains and forests high above the flood plains, where there is warmth in the summer and extreme cold during winter.  The forests have always captured her heart and keep her from venturing to far from home.',
