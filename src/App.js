@@ -21,6 +21,8 @@ function App() {
         Create Character
       </Button>
       <Divider />
+      {/*Character list component goes here
+         Character detail component and route goes here */}
       <CreationForm openModal={open} closeModal={handleClose} />
     </div>
   );
