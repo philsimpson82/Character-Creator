@@ -1,5 +1,6 @@
+import CharacterCard from "./CharacterCard";
 import { selectAllCharacters } from "./characterSlice";
-import { Box, Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 
 const CharacterList = () => {
     const characters = selectAllCharacters();
@@ -8,14 +9,7 @@ const CharacterList = () => {
         <Box>
             {characters.map((character) => {
                 return (
-                    <Card>
-                        <CardActionArea>
-                            <CardMedia />
-                            <CardContent>
-                                <Typography></Typography>
-                            </CardContent>
-                        </CardActionArea>
-                    </Card>
+                    <CharacterCard character={character}/>
                 )
             })}
         </Box>
