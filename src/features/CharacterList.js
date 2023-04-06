@@ -9,7 +9,7 @@ const CharacterList = () => {
         <Box>
             {characters.map((character) => {
                 return (
-                    <CharacterCard character={character}/>
+                    <CharacterCard character={character} />
                 )
             })}
         </Box>

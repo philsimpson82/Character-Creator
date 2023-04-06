@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { Modal, TextField, Button, Box, Container, MenuItem, FormGroup} from '@mui/material';
+import { Modal, TextField, Button, Box, MenuItem, FormGroup} from '@mui/material';
 import { Formik, Form, ErrorMessage } from 'formik';
 import { LEVELS, RACES, CLASSES, GENDER, STRENGTH, DEXTERITY, CONSTITUTION, INTELLIGENCE, WISDOM, CHARISMA } from '../app/shared/CHARACTEROPTIONS';
 import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
