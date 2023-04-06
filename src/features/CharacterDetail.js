@@ -1,11 +1,10 @@
 import { Card, CardActionArea, CardMedia, CardContent, Typography, Box } from "@mui/material";
-import { Link } from "react-router-dom";
 
-const CharacterCard = ({ character }) => {
-    const { id, name, level, race, rpgclass } = character;
+const CharacterDetail = ({ character }) => {
+    const { name, level, gender, race, rpgclass, backstory, player } = character;
+
     return (
-        <Link to={`${id}`}>
-            <Card sx={{ maxWidth: 250 }}>
+        <Card sx={{ maxWidth: 250 }}>
                 <CardActionArea>
                     <Box sx={{ position: 'relative' }}>
                         <CardMedia />
@@ -47,8 +46,7 @@ const CharacterCard = ({ character }) => {
                     </CardContent>
                 </CardActionArea>
             </Card>
-        </Link>
     );
 }
 
-export default CharacterCard;
+export default CharacterDetail;
