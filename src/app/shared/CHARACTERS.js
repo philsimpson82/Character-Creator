@@ -6,6 +6,7 @@ export const CHARACTERS = [
         gender: 'male',
         race: 'halfling',
         rpgclass: 'rogue',
+        img: '',
         backstory: 'A feisty and crafty halfing, Davon Lightfoot favors daggers and a rapier, and sometimes a hand crossbow, during his rogueish piracy adventures.',
         player: 'Phil Simpson',
     },
